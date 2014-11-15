@@ -1,16 +1,69 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/jumbotron_narrow.css" rel="stylesheet">
 		<link href="http://fonts.googleapis.com/css?family=Lobster|Cabin" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
 		<title> Ali's Attempt to Play God</title>
-		<script src='js/jquery.js'></script>
-		<script src='js/SeamlessLoop.js'></script>
-		<script src='js/gOl.js'></script>
-		<script src='js/startingCases.js'></script> 
-		<!-- <script src='js/tester.js'></script> -->
 		<link rel="stylesheet" href="css/gOl.css">
+		<script src='js/jquery.js'></script>
+		<script src='js/gOl.js'></script>
+		<script src='js/startingCases.js'></script>		
+		<script src='js/tester.js'></script>
 	</head>
-	<body style="margin: 0 0 0 0;">
-		<h1> Please have sound on!</h1>
+	<body style="margin: 0 0 0 0; padding=0 0 0 0;">
+	    <div class="container">
+	      	<h1 id="headerItem" style="font-size:4em; padding-top:0px; padding-bottom=0px;">Welcome to the Game of Life!</h1>
+
+	      	<div class="header">
+	        	<div id="menubar">
+	        		<!-- buttons -->
+					<button id="togglePartyMode" onclick="togglePartyMode()" style="display:none;">Toggle Party Mode<br><small>WARNING: MAY CAUSE SEIZURES</small></button>
+
+					<button id="stopEverything" onclick="toggleIntervals()" style="display:none;">Stop</br>  </button>
+					<button id="startEverything" onclick="toggleIntervals()" style="display: inline;">Start</button>
+
+					<button id="heyyeahyeahbutton" onclick="toggleHeyYeahYeahMode()" style="display: none;">HEYYEYAAEYAAAEYAEYAA<br><small>NYAHHHHH</small></button>
+
+					<!-- Audio for playing music during different modes -->
+					<audio loop id='nyanaudioPlayer'> 
+							<source src='https://hackmit.org/core/static/assets/catloop.mp3' type='audio/mpeg'> 
+							Sorry, audio is not supported with this browser. 
+					</audio>
+					<audio loop id='heyyeahaudioPlayer'> 
+							<source src='https://a.tumblr.com/tumblr_m57smrKtG31r5hnnmo1.mp3#_=_' type='audio/mpeg'> 
+							Sorry, audio is not supported with this browser. 
+					</audio>
+				</div>
+				<br>
+	     	</div>
+
+	      	<div class="jumbotron" id="jumbotronItem"></div>
+			
+			<!-- Settings and Restart -->
+	      	<div id="infoText" style="display:inline;">
+			  	<div class="row marketing">
+			    	<div class="col-lg-6">
+						<button id="randomButtonBar" onclick="toggleRandom()">Randomize</button>
+			      		<p>Generates and draws a random board.</p>
+			    	</div>
+			    	<!-- function does not work 
+					<div class="col-lg-6">
+						<form role="form">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Pick Board Size</label>
+								<input type="number" class="form-control" id="sizeFormValue" placeholder="enter number 2-50"><button id="submitSizeValue" onclick="submitValue()"> Submit</button>
+							</div>	
+						</form>		    	
+					</div>
+				-->
+			  	</div>
+			</div>
+
+	      	<div id="footer">
+	      		Ali Finkelstein - 6.170 Project 1.2
+	      	</div>
+		</div>
 	</body>
 </html>

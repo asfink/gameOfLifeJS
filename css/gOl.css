@@ -1,5 +1,22 @@
 html{
 	text-align: center;
-	font-family: 'Lobster', cursive;
+	font-family: 'VT323';
+	padding:0 0 0 0;
+	padding-top: 0;
+}
 
+body{
+	font-family:  'VT323';
+}
+
+button{
+	font-family: 'VT323';
+}
+
+footer img{
+	visibility:'hidden';
+}
+
+button small{
+	font-size: 1em;
 }
